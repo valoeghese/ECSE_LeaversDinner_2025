@@ -1,0 +1,36 @@
+Removed Pin From Net: NetName=GPIO16 Pin=R6-2
+Removed Pin From Net: NetName=GPIO17 Pin=R7-2
+Removed Pin From Net: NetName=GPIO18 Pin=R8-2
+Removed Pin From Net: NetName=GPIO19 Pin=R9-2
+Removed Pin From Net: NetName=GPIO20 Pin=R10-2
+Removed Pin From Net: NetName=GPIO21 Pin=U1-32
+Removed Pin From Net: NetName=GPIO22 Pin=U1-34
+Removed Pin From Net: NetName=GPIO23 Pin=U1-35
+Removed Pin From Net: NetName=GPIO24 Pin=U1-36
+Removed Pin From Net: NetName=GPIO25 Pin=U1-37
+Added Pin To Net: NetName=GPIO23 Pin=D15-1
+Added Pin To Net: NetName=GPIO0 Pin=R6-2
+Added Pin To Net: NetName=GPIO1 Pin=R7-2
+Added Pin To Net: NetName=GPIO2 Pin=R8-2
+Added Pin To Net: NetName=GPIO3 Pin=R9-2
+Added Pin To Net: NetName=GPIO4 Pin=R10-2
+Added Pin To Net: NetName=GPIO21 Pin=U1-7
+Added Pin To Net: NetName=GPIO22 Pin=U1-8
+Added Pin To Net: NetName=GPIO23 Pin=U1-9
+Added Pin To Net: NetName=GPIO24 Pin=U1-11
+Added Pin To Net: NetName=GPIO25 Pin=U1-12
+Change Net Name : Old Net Name=GPIO21 New Net Name=GPIO5
+Change Net Name : Old Net Name=GPIO22 New Net Name=GPIO6
+Change Net Name : Old Net Name=GPIO23 New Net Name=GPIO7
+Change Net Name : Old Net Name=GPIO24 New Net Name=GPIO8
+Change Net Name : Old Net Name=GPIO25 New Net Name=GPIO9
+Added Pin To Net: NetName=GPIO21 Pin=U1-32
+Added Net: Name=GPIO21
+Added Pin To Net: NetName=GPIO22 Pin=U1-34
+Added Net: Name=GPIO22
+Added Pin To Net: NetName=GPIO23 Pin=U1-35
+Added Net: Name=GPIO23
+Added Pin To Net: NetName=GPIO24 Pin=U1-36
+Added Net: Name=GPIO24
+Added Pin To Net: NetName=GPIO25 Pin=U1-37
+Added Net: Name=GPIO25

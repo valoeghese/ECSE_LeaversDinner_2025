@@ -1,0 +1,16 @@
+Added Component: Designator=U?(SOIC127P790X216-8N)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/W25Q32JVSSIQ/Winbond+Electronics/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Winbond"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "W25Q32JVSSIQ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOIC-8 Winbond"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/W25Q32JVSSIQ/Winbond+Electronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=QSPI_SS Pin=U?-1
+Added Pin To Net: NetName=QSPI_SD1 Pin=U?-2
+Added Pin To Net: NetName=QSPI_SD2 Pin=U?-3
+Added Pin To Net: NetName=GND Pin=U?-4
+Added Pin To Net: NetName=QSPI_SD0 Pin=U?-5
+Added Pin To Net: NetName=QSPI_SCLK Pin=U?-6
+Added Pin To Net: NetName=QSPI_SD3 Pin=U?-7
+Added Pin To Net: NetName=3V3 Pin=U?-8
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component U? W25Q32JVSSIQ

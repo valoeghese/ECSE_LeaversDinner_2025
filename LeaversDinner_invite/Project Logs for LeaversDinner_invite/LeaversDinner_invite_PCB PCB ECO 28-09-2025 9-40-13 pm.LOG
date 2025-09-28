@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=XIN Pin=U1-20
+Added Net: Name=XIN
+Added Pin To Net: NetName=XOUT Pin=U1-21
+Added Net: Name=XOUT
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_46

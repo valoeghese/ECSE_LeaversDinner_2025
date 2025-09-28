@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=3V3 Pin=R5-1
+Removed Pin From Net: NetName=GND Pin=RESET-1
+Removed Pin From Net: NetName=GND Pin=RESET-1
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R5
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=RESET
+Added Pin To Net: NetName=3V3 Pin=U1-26

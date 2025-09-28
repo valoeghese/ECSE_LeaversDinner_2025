@@ -1,0 +1,271 @@
+Change Component Designator: OldDesignator=5V NewDesignator=CON?
+Change Component Designator: OldDesignator=GND NewDesignator=CON?
+Added Component: Designator=BOOTSEL(ece-SW-SM)
+Added Component: Designator=J?(FP-USB4110-GF-A-MFG)
+Add component (AddParameter): Name = "Automotive"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "Conn"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://gct.co/files/drawings/usb4110.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Conn Orientation"; Value = "Right Angle"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Gold,Nickel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "3/4.25/1.25/0.25A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device Class L1"; Value = "Connectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device Class L2"; Value = "USB Connectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device Class L3"; Value = "unset"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digikey Description"; Value = "CONN USB 2.0 TYPE-C R/A SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.46mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Is Female"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "GCT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "USB4110-GF-A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number Of Contacts"; Value = "16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Octopart"; Value = "https://octopart.com/usb4110-gf-a-gct-103941985"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "TRUE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Shielding"; Value = "true"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Standoff Height"; Value = "0.1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature"; Value = "-40°C to +85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range High"; Value = "+85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Range Low"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Usb Standard"; Value = "USB 2.0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "20V"; VariantName = "[No Variations]"
+Added Component: Designator=R1(0805 RES)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://nz.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "27R4"; VariantName = "[No Variations]"
+Added Component: Designator=R2(0805 RES)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://nz.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "27R4"; VariantName = "[No Variations]"
+Added Component: Designator=R3(0805 RES)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://nz.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "DNP"; VariantName = "[No Variations]"
+Added Component: Designator=R4(0805 RES)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://nz.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Added Component: Designator=R5(0805 RES)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "https://nz.mouser.com/datasheet/2/315/AOA0000C304-1149620.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=RESET(ece-SW-SM)
+Added Component: Designator=SWD(HDR1X3)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U?(QFN40P700X700X90-57N)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/RP2040/Raspberry+Pi/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Raspberry Pi"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RP2040"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RP2040/Raspberry+Pi/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=BOOTSEL-1
+Added Pin To Net: NetName=GND Pin=BOOTSEL-1
+Added Pin To Net: NetName=GND Pin=J?-1
+Added Pin To Net: NetName=GND Pin=J?-2
+Added Pin To Net: NetName=GND Pin=J?-3
+Added Pin To Net: NetName=GND Pin=J?-4
+Added Pin To Net: NetName=GND Pin=J?-A1-B12
+Added Pin To Net: NetName=GND Pin=J?-B1-A12
+Added Pin To Net: NetName=GND Pin=RESET-1
+Added Pin To Net: NetName=GND Pin=RESET-1
+Added Pin To Net: NetName=GND Pin=SWD-2
+Added Pin To Net: NetName=GND Pin=U?-19
+Added Pin To Net: NetName=GND Pin=U?-57
+Added Pin To Net: NetName=1V1 Pin=U?-23
+Added Pin To Net: NetName=1V1 Pin=U?-45
+Added Pin To Net: NetName=1V1 Pin=U?-50
+Added Net: Name=1V1
+Added Pin To Net: NetName=3V3 Pin=R3-1
+Added Pin To Net: NetName=3V3 Pin=R5-1
+Added Pin To Net: NetName=3V3 Pin=U?-1
+Added Pin To Net: NetName=3V3 Pin=U?-10
+Added Pin To Net: NetName=3V3 Pin=U?-22
+Added Pin To Net: NetName=3V3 Pin=U?-33
+Added Pin To Net: NetName=3V3 Pin=U?-42
+Added Pin To Net: NetName=3V3 Pin=U?-43
+Added Pin To Net: NetName=3V3 Pin=U?-44
+Added Pin To Net: NetName=3V3 Pin=U?-48
+Added Pin To Net: NetName=3V3 Pin=U?-49
+Added Net: Name=3V3
+Added Pin To Net: NetName=GPIO0 Pin=U?-2
+Added Net: Name=GPIO0
+Added Pin To Net: NetName=GPIO1 Pin=U?-3
+Added Net: Name=GPIO1
+Added Pin To Net: NetName=GPIO2 Pin=U?-4
+Added Net: Name=GPIO2
+Added Pin To Net: NetName=GPIO3 Pin=U?-5
+Added Net: Name=GPIO3
+Added Pin To Net: NetName=GPIO4 Pin=U?-6
+Added Net: Name=GPIO4
+Added Pin To Net: NetName=GPIO5 Pin=U?-7
+Added Net: Name=GPIO5
+Added Pin To Net: NetName=GPIO6 Pin=U?-8
+Added Net: Name=GPIO6
+Added Pin To Net: NetName=GPIO7 Pin=U?-9
+Added Net: Name=GPIO7
+Added Pin To Net: NetName=GPIO8 Pin=U?-11
+Added Net: Name=GPIO8
+Added Pin To Net: NetName=GPIO9 Pin=U?-12
+Added Net: Name=GPIO9
+Added Pin To Net: NetName=GPIO10 Pin=U?-13
+Added Net: Name=GPIO10
+Added Pin To Net: NetName=GPIO11 Pin=U?-14
+Added Net: Name=GPIO11
+Added Pin To Net: NetName=GPIO12 Pin=U?-15
+Added Net: Name=GPIO12
+Added Pin To Net: NetName=GPIO13 Pin=U?-16
+Added Net: Name=GPIO13
+Added Pin To Net: NetName=GPIO14 Pin=U?-17
+Added Net: Name=GPIO14
+Added Pin To Net: NetName=GPIO15 Pin=U?-18
+Added Net: Name=GPIO15
+Added Pin To Net: NetName=GPIO16 Pin=U?-27
+Added Net: Name=GPIO16
+Added Pin To Net: NetName=GPIO17 Pin=U?-28
+Added Net: Name=GPIO17
+Added Pin To Net: NetName=GPIO18 Pin=U?-29
+Added Net: Name=GPIO18
+Added Pin To Net: NetName=GPIO19 Pin=U?-30
+Added Net: Name=GPIO19
+Added Pin To Net: NetName=GPIO20 Pin=U?-31
+Added Net: Name=GPIO20
+Added Pin To Net: NetName=GPIO21 Pin=U?-32
+Added Net: Name=GPIO21
+Added Pin To Net: NetName=GPIO22 Pin=U?-34
+Added Net: Name=GPIO22
+Added Pin To Net: NetName=GPIO23 Pin=U?-35
+Added Net: Name=GPIO23
+Added Pin To Net: NetName=GPIO24 Pin=U?-36
+Added Net: Name=GPIO24
+Added Pin To Net: NetName=GPIO25 Pin=U?-37
+Added Net: Name=GPIO25
+Added Pin To Net: NetName=GPIO26 Pin=U?-38
+Added Net: Name=GPIO26
+Added Pin To Net: NetName=GPIO27 Pin=U?-39
+Added Net: Name=GPIO27
+Added Pin To Net: NetName=GPIO28 Pin=U?-40
+Added Net: Name=GPIO28
+Added Pin To Net: NetName=GPIO29 Pin=U?-41
+Added Net: Name=GPIO29
+Added Pin To Net: NetName=NetBOOTSEL_2 Pin=BOOTSEL-2
+Added Pin To Net: NetName=NetBOOTSEL_2 Pin=BOOTSEL-2
+Added Pin To Net: NetName=NetBOOTSEL_2 Pin=R4-1
+Added Net: Name=NetBOOTSEL_2
+Added Pin To Net: NetName=NetJ?_A6 Pin=J?-A6
+Added Pin To Net: NetName=NetJ?_A6 Pin=R1-1
+Added Net: Name=NetJ?_A6
+Added Pin To Net: NetName=NetJ?_A7 Pin=J?-A7
+Added Pin To Net: NetName=NetJ?_A7 Pin=R2-1
+Added Net: Name=NetJ?_A7
+Added Pin To Net: NetName=QSPI_SCLK Pin=U?-52
+Added Net: Name=QSPI_SCLK
+Added Pin To Net: NetName=QSPI_SD0 Pin=U?-53
+Added Net: Name=QSPI_SD0
+Added Pin To Net: NetName=QSPI_SD1 Pin=U?-55
+Added Net: Name=QSPI_SD1
+Added Pin To Net: NetName=QSPI_SD2 Pin=U?-54
+Added Net: Name=QSPI_SD2
+Added Pin To Net: NetName=QSPI_SD3 Pin=U?-51
+Added Net: Name=QSPI_SD3
+Added Pin To Net: NetName=QSPI_SS Pin=R3-2
+Added Pin To Net: NetName=QSPI_SS Pin=R4-2
+Added Pin To Net: NetName=QSPI_SS Pin=U?-56
+Added Net: Name=QSPI_SS
+Added Pin To Net: NetName=RUN Pin=R5-2
+Added Pin To Net: NetName=RUN Pin=RESET-2
+Added Pin To Net: NetName=RUN Pin=RESET-2
+Added Pin To Net: NetName=RUN Pin=U?-26
+Added Net: Name=RUN
+Added Pin To Net: NetName=SWCLK Pin=SWD-1
+Added Pin To Net: NetName=SWCLK Pin=U?-24
+Added Net: Name=SWCLK
+Added Pin To Net: NetName=SWDIO Pin=SWD-3
+Added Pin To Net: NetName=SWDIO Pin=U?-25
+Added Net: Name=SWDIO
+Added Pin To Net: NetName=USB_DM Pin=R2-2
+Added Pin To Net: NetName=USB_DM Pin=U?-46
+Added Net: Name=USB_DM
+Added Pin To Net: NetName=USB_DP Pin=R1-2
+Added Pin To Net: NetName=USB_DP Pin=U?-47
+Added Net: Name=USB_DP
+Added Pin To Net: NetName=VBus Pin=J?-A4-B9
+Added Pin To Net: NetName=VBus Pin=J?-B4-A9
+Added Net: Name=VBus
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component BOOTSEL PB switchSM
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component CON? Connector
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component J? USB4110-GF-A
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R1 27R4
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R2 27R4
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R3 DNP
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R4 1K
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R5 10K
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component RESET PB switchSM
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component SWD Header 3
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component U? RP2040
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3
+Added Rule: Name=Schematic Supply Nets_4
+Added Rule: Name=Schematic Supply Nets_5
+Added Rule: Name=Schematic Supply Nets_6
+Added Rule: Name=Schematic Supply Nets_7
+Added Rule: Name=Schematic Supply Nets_8
+Added Rule: Name=Schematic Supply Nets_9
+Added Rule: Name=Schematic Supply Nets_10
+Added Rule: Name=Schematic Supply Nets_11
+Added Rule: Name=Schematic Supply Nets_12
+Added Rule: Name=Schematic Supply Nets_13
+Added Rule: Name=Schematic Supply Nets_14
+Added Rule: Name=Schematic Supply Nets_15
+Added Rule: Name=Schematic Supply Nets_16
+Added Rule: Name=Schematic Supply Nets_17
+Added Rule: Name=Schematic Supply Nets_18
+Added Rule: Name=Schematic Supply Nets_19
+Added Rule: Name=Schematic Supply Nets_20
+Added Rule: Name=Schematic Supply Nets_21
+Added Rule: Name=Schematic Supply Nets_22
+Added Rule: Name=Schematic Supply Nets_23
+Added Rule: Name=Schematic Supply Nets_24
+Added Rule: Name=Schematic Supply Nets_25
+Added Rule: Name=Schematic Supply Nets_26
+Added Rule: Name=Schematic Supply Nets_27
+Added Rule: Name=Schematic Supply Nets_28
+Added Rule: Name=Schematic Supply Nets_29
+Added Rule: Name=Schematic Supply Nets_30
+Added Rule: Name=Schematic Supply Nets_31
+Added Rule: Name=Schematic Supply Nets_32
+Added Rule: Name=Schematic Supply Nets_33
+Added Rule: Name=Schematic Supply Nets_34
+Added Rule: Name=Schematic Supply Nets_35
+Added Rule: Name=Schematic Supply Nets_36
+Added Rule: Name=Schematic Supply Nets_37
+Added Rule: Name=Schematic Supply Nets_38
+Added Rule: Name=Schematic Supply Nets_39
+Added Rule: Name=Schematic Supply Nets_40
+Added Rule: Name=Schematic Supply Nets_41
+Added Rule: Name=Schematic Supply Nets_42
+Added Rule: Name=Schematic Supply Nets_43
+Added Rule: Name=Schematic Supply Nets_44
+Added Rule: Name=Schematic Supply Nets_45

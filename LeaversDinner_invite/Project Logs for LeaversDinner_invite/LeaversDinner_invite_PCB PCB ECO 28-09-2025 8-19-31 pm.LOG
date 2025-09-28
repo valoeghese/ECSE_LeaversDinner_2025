@@ -1,0 +1,99 @@
+Removed Pin From Net: NetName=GPIO21 Pin=R6-1
+Removed Pin From Net: NetName=GPIO21 Pin=R7-1
+Removed Pin From Net: NetName=GPIO21 Pin=R8-1
+Removed Pin From Net: NetName=GPIO21 Pin=R9-1
+Removed Pin From Net: NetName=GPIO21 Pin=R10-1
+Removed Pin From Net: NetName=GPIO22 Pin=R11-1
+Removed Pin From Net: NetName=GPIO22 Pin=R12-1
+Removed Pin From Net: NetName=GPIO22 Pin=R13-1
+Removed Pin From Net: NetName=GPIO22 Pin=R14-1
+Removed Pin From Net: NetName=GPIO22 Pin=R15-1
+Removed Pin From Net: NetName=GPIO23 Pin=R16-1
+Removed Pin From Net: NetName=GPIO23 Pin=R17-1
+Removed Pin From Net: NetName=GPIO23 Pin=R18-1
+Removed Pin From Net: NetName=GPIO23 Pin=R19-1
+Removed Pin From Net: NetName=GPIO23 Pin=R20-1
+Removed Pin From Net: NetName=GPIO24 Pin=R21-1
+Removed Pin From Net: NetName=GPIO24 Pin=R22-1
+Removed Pin From Net: NetName=GPIO24 Pin=R23-1
+Removed Pin From Net: NetName=GPIO24 Pin=R24-1
+Removed Pin From Net: NetName=GPIO24 Pin=R25-1
+Removed Pin From Net: NetName=GPIO25 Pin=R26-1
+Removed Pin From Net: NetName=GPIO25 Pin=R27-1
+Removed Pin From Net: NetName=GPIO25 Pin=R28-1
+Removed Pin From Net: NetName=GPIO25 Pin=R29-1
+Removed Pin From Net: NetName=GPIO25 Pin=R30-1
+Removed Pin From Net: NetName=GPIO16 Pin=U1-27
+Removed Pin From Net: NetName=GPIO17 Pin=U1-28
+Removed Pin From Net: NetName=GPIO18 Pin=U1-29
+Removed Pin From Net: NetName=GPIO19 Pin=U1-30
+Removed Pin From Net: NetName=GPIO20 Pin=U1-31
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R11
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R12
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R13
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R14
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R15
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R16
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R17
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R18
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R19
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R20
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R21
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R22
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R23
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R24
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R25
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R26
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R27
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R28
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R29
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=R30
+Added Pin To Net: NetName=GPIO21 Pin=D1-1
+Added Pin To Net: NetName=GPIO21 Pin=D2-1
+Added Pin To Net: NetName=GPIO21 Pin=D3-1
+Added Pin To Net: NetName=GPIO21 Pin=D4-1
+Added Pin To Net: NetName=GPIO21 Pin=D5-1
+Added Pin To Net: NetName=GPIO22 Pin=D6-1
+Added Pin To Net: NetName=GPIO22 Pin=D7-1
+Added Pin To Net: NetName=GPIO22 Pin=D8-1
+Added Pin To Net: NetName=GPIO22 Pin=D9-1
+Added Pin To Net: NetName=GPIO22 Pin=D10-1
+Added Pin To Net: NetName=GPIO23 Pin=D11-1
+Added Pin To Net: NetName=GPIO23 Pin=D12-1
+Added Pin To Net: NetName=GPIO23 Pin=D13-1
+Added Pin To Net: NetName=GPIO23 Pin=D14-1
+Added Pin To Net: NetName=GPIO24 Pin=D16-1
+Added Pin To Net: NetName=GPIO24 Pin=D17-1
+Added Pin To Net: NetName=GPIO24 Pin=D18-1
+Added Pin To Net: NetName=GPIO24 Pin=D19-1
+Added Pin To Net: NetName=GPIO24 Pin=D20-1
+Added Pin To Net: NetName=GPIO25 Pin=D21-1
+Added Pin To Net: NetName=GPIO25 Pin=D22-1
+Added Pin To Net: NetName=GPIO25 Pin=D23-1
+Added Pin To Net: NetName=GPIO25 Pin=D24-1
+Added Pin To Net: NetName=GPIO25 Pin=D25-1
+Added Pin To Net: NetName=GPIO16 Pin=R6-1
+Added Pin To Net: NetName=GPIO17 Pin=R7-1
+Added Pin To Net: NetName=GPIO18 Pin=R8-1
+Added Pin To Net: NetName=GPIO19 Pin=R9-1
+Added Pin To Net: NetName=GPIO20 Pin=R10-1
+Change Net Name : Old Net Name=GPIO16 New Net Name=NetD1_2
+Change Net Name : Old Net Name=GPIO17 New Net Name=NetD2_2
+Change Net Name : Old Net Name=GPIO18 New Net Name=NetD3_2
+Change Net Name : Old Net Name=GPIO19 New Net Name=NetD4_2
+Change Net Name : Old Net Name=GPIO20 New Net Name=NetD5_2
+Added Pin To Net: NetName=GPIO16 Pin=R6-2
+Added Pin To Net: NetName=GPIO16 Pin=U1-27
+Added Net: Name=GPIO16
+Added Pin To Net: NetName=GPIO17 Pin=R7-2
+Added Pin To Net: NetName=GPIO17 Pin=U1-28
+Added Net: Name=GPIO17
+Added Pin To Net: NetName=GPIO18 Pin=R8-2
+Added Pin To Net: NetName=GPIO18 Pin=U1-29
+Added Net: Name=GPIO18
+Added Pin To Net: NetName=GPIO19 Pin=R9-2
+Added Pin To Net: NetName=GPIO19 Pin=U1-30
+Added Net: Name=GPIO19
+Added Pin To Net: NetName=GPIO20 Pin=R10-2
+Added Pin To Net: NetName=GPIO20 Pin=U1-31
+Added Net: Name=GPIO20
