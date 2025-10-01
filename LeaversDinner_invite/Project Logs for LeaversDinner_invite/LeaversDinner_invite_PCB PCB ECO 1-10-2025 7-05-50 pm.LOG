@@ -1,0 +1,17 @@
+Added Pin To Net: NetName=GPIO16 Pin=R6-2
+Added Pin To Net: NetName=GPIO17 Pin=R7-2
+Added Pin To Net: NetName=GPIO18 Pin=R8-2
+Added Pin To Net: NetName=GPIO19 Pin=R9-2
+Added Pin To Net: NetName=GPIO20 Pin=R10-2
+Added Pin To Net: NetName=LED_R1 Pin=U1-32
+Added Pin To Net: NetName=LED_R2 Pin=U1-34
+Added Pin To Net: NetName=LED_R3 Pin=U1-35
+Added Pin To Net: NetName=LED_R4 Pin=U1-36
+Added Pin To Net: NetName=LED_R5 Pin=U1-37
+Change Net Name : Old Net Name=LED_R1 New Net Name=GPIO21
+Change Net Name : Old Net Name=LED_R2 New Net Name=GPIO22
+Change Net Name : Old Net Name=LED_R3 New Net Name=GPIO23
+Change Net Name : Old Net Name=LED_R4 New Net Name=GPIO24
+Change Net Name : Old Net Name=LED_R5 New Net Name=GPIO25
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R? 5K1
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R? 5K1

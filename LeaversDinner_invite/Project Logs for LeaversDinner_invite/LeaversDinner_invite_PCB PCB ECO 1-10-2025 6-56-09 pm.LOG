@@ -1,0 +1,74 @@
+Removed Pin From Net: NetName=GND Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-2
+Removed Pin From Net: NetName=GND Pin=J1-3
+Removed Pin From Net: NetName=GND Pin=J1-4
+Removed Pin From Net: NetName=GND Pin=J1-A1-B12
+Removed Pin From Net: NetName=VBus Pin=J1-A4-B9
+Removed Pin From Net: NetName=USB_DP Pin=J1-A6
+Removed Pin From Net: NetName=USB_DM Pin=J1-A7
+Removed Pin From Net: NetName=GND Pin=J1-B1-A12
+Removed Pin From Net: NetName=VBus Pin=J1-B4-A9
+Removed Pin From Net: NetName=USB_DP Pin=J1-B6
+Removed Pin From Net: NetName=USB_DM Pin=J1-B7
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=J1
+Added Component: Designator=J?(KINGHELM_KH-TYPE-C-16P)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/KH-TYPE-C-16P/Kinghelm/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "kinghelm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "KH-TYPE-C-16P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/KH-TYPE-C-16P/Kinghelm/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R?(FP-MCR01-IPC_B)
+Add component (AddParameter): Name = "Case/Package"; Value = "Molded"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Military Standard"; Value = "Not"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "63mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "5K1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistor Type"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=R?(FP-MCR01-IPC_B)
+Add component (AddParameter): Name = "Case/Package"; Value = "Molded"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "0.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "155°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Military Standard"; Value = "Not"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power Rating"; Value = "63mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "5K1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistor Type"; Value = "Thick Film"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "50V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J?-A1_B12
+Added Pin To Net: NetName=VBus Pin=J?-A4_B9
+Added Pin To Net: NetName=USB_DP Pin=J?-A6
+Added Pin To Net: NetName=USB_DM Pin=J?-A7
+Added Pin To Net: NetName=VBus Pin=J?-A9_B4
+Added Pin To Net: NetName=GND Pin=J?-A12_B1
+Added Pin To Net: NetName=USB_DP Pin=J?-B6
+Added Pin To Net: NetName=USB_DM Pin=J?-B7
+Added Pin To Net: NetName=GND Pin=J?-SH1
+Added Pin To Net: NetName=GND Pin=J?-SH2
+Added Pin To Net: NetName=GND Pin=J?-SH3
+Added Pin To Net: NetName=GND Pin=J?-SH4
+Added Pin To Net: NetName=GND Pin=R?-1
+Added Pin To Net: NetName=GND Pin=R?-1
+Added Pin To Net: NetName=USB_CC1 Pin=J?-A5
+Added Pin To Net: NetName=USB_CC1 Pin=R?-2
+Added Net: Name=USB_CC1
+Added Pin To Net: NetName=USB_CC2 Pin=J?-B5
+Added Pin To Net: NetName=USB_CC2 Pin=R?-2
+Added Net: Name=USB_CC2
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component J? KH-TYPE-C-16P
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component P? Header 8X2
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R? 5K1
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component R? 5K1
+Added Rule: Name=Schematic Supply Nets_58
+Added Rule: Name=Schematic Supply Nets_59

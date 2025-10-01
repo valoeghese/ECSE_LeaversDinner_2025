@@ -1,0 +1,2 @@
+Change Component Designator: OldDesignator=P1 NewDesignator=GPIO
+Change Component Designator: OldDesignator=SWD NewDesignator=DEBUG
