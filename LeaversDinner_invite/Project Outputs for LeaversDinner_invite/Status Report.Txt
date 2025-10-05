@@ -1,12 +1,13 @@
 Output: NC Drill Files
 Type  : NC Drill
 From  : PCB Document [LeaversDinner_invite_PCB.PcbDoc]
-   Generated File[LeaversDinner_invite_PCB.TXT]
+   Generated File[LeaversDinner_invite_PCB-RoundHoles.TXT]
+   Generated File[LeaversDinner_invite_PCB-SlotHoles.TXT]
    Generated File[LeaversDinner_invite_PCB.LDP]
    Generated File[LeaversDinner_invite_PCB.DRR]
 
 
-Files Generated   : 3
+Files Generated   : 4
 Documents Printed : 0
 
-Finished Output Generation At 11:21:32 pm On 28/09/2025
+Finished Output Generation At 3:23:43 pm On 5/10/2025

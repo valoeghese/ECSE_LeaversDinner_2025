@@ -1,0 +1,18 @@
+Change Component Designator: OldDesignator=C? NewDesignator=C12
+Change Component Designator: OldDesignator=C? NewDesignator=C13
+Added Component: Designator=U3(SOT-23)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/XC6206P332MR-G/Torex/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Torex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "XC6206P332MR-G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23-3 Torex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/XC6206P332MR-G/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/XC6206P332MR-G/Torex/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U3-1
+Added Pin To Net: NetName=3V3 Pin=U3-2
+Added Pin To Net: NetName=VBus Pin=U3-3
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC13_1
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component C13 C0402
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component U3 662K LDO

@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=GND Pin=BOOTSEL-1
+Removed Pin From Net: NetName=GND Pin=BOOTSEL-3
+Removed Pin From Net: NetName=GND Pin=BOOTSEL-4
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=BOOTSEL
+Added Component: Designator=BOOTSEL?(SW-SMD_YZA-021)
+Add component (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ApplicableTemperatureRange"; Value = "-10°C to +60°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ButtonShape"; Value = "Rectangle button"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Circuit"; Value = "SPST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "https://item.szlcsc.com/datasheet/YZA-021/51487234.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Installation Method"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LCSC Part Name"; Value = "YIZHI(??) YZA-021 2*4*3.5MM??????"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "YIZHI(??)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RatedCurrent"; Value = "50mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "StorageTemperatureRange"; Value = "-40°C to +80°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Footprint"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part"; Value = "C49108617"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switch Size"; Value = "2*4*3.5MM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Tactile Switch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "WorkingLife"; Value = "50,000 Cycles"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=BOOTSEL?-2
+Added Pin To Net: NetName=GND Pin=BOOTSEL?-3
+Added Pin To Net: NetName=GND Pin=BOOTSEL?-4
+Added Pin To Net: NetName=NetBOOTSEL?_1 Pin=BOOTSEL?-1
+Added Pin To Net: NetName=NetBOOTSEL?_1 Pin=R4-2
+Added Net: Name=NetBOOTSEL?_1
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component BOOTSEL? YZA-021

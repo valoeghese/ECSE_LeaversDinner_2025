@@ -1,0 +1,28 @@
+Change Footprint: Cannot match pads with new footprint in component :BOOTSEL Footprint:SW-SMD_YZA-021
+Change Component Footprint: Designator=R1 Old Footprint=FP-MCR01-IPC_B New Footprint=FP-MCR01-MFG
+Change Component Comment : Designator=BOOTSEL Old Comment=PB switchSM New Comment=YZA-021
+Change component parameters: Designator = "BOOTSEL" ("BOOTSEL"); Footprint = "ece-SW-SM"; UniqueID = "\PJNEPTPY" ("\PJNEPTPY")
+Change component parameters (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ApplicableTemperatureRange"; Value = "-10°C to +60°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ButtonShape"; Value = "Rectangle button"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Circuit"; Value = "SPST"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet"; Value = "https://item.szlcsc.com/datasheet/YZA-021/51487234.html"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Device"; Value = "YZA-021"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Installation Method"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LCSC Part Name"; Value = "YIZHI(??) YZA-021 2*4*3.5MM??????"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "YIZHI(??)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part"; Value = "YZA-021"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RatedCurrent"; Value = "50mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "StorageTemperatureRange"; Value = "-40°C to +80°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Footprint"; Value = "-"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part"; Value = "C49108617"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Switch Size"; Value = "2*4*3.5MM"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Symbol"; Value = "YZA-021"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Tactile Switch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "WorkingLife"; Value = "50,000 Cycles"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin BOOTSEL-3
+Add Pin To Net: Unknown Pin: Pin BOOTSEL-4
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component U3 662K LDO
