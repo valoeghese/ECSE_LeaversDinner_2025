@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=GPIO21 Pin=-1
+Removed Pin From Net: NetName=GPIO22 Pin=-1
+Removed Pin From Net: NetName=GPIO23 Pin=-1
+Removed Pin From Net: NetName=GPIO24 Pin=-1
+Removed Pin From Net: NetName=GPIO25 Pin=-1
+Removed Pin From Net: NetName=GPIO16 Pin=R6-2
+Removed Pin From Net: NetName=GPIO17 Pin=R7-2
+Removed Pin From Net: NetName=GPIO18 Pin=R8-2
+Removed Pin From Net: NetName=GPIO19 Pin=R9-2
+Removed Pin From Net: NetName=GPIO20 Pin=R10-2
+Change Component Designator: OldDesignator= NewDesignator=Q1
+Change Component Designator: OldDesignator= NewDesignator=Q2
+Change Component Designator: OldDesignator= NewDesignator=Q3
+Change Component Designator: OldDesignator= NewDesignator=Q4
+Change Component Designator: OldDesignator= NewDesignator=Q5
+Added Pin To Net: NetName=GPIO19 Pin=Q1-1
+Added Pin To Net: NetName=GPIO18 Pin=Q2-1
+Added Pin To Net: NetName=GPIO17 Pin=Q3-1
+Added Pin To Net: NetName=GPIO20 Pin=Q4-1
+Added Pin To Net: NetName=GPIO16 Pin=Q5-1
+Added Pin To Net: NetName=GPIO21 Pin=R6-2
+Added Pin To Net: NetName=GPIO22 Pin=R7-2
+Added Pin To Net: NetName=GPIO23 Pin=R8-2
+Added Pin To Net: NetName=GPIO24 Pin=R9-2
+Added Pin To Net: NetName=GPIO25 Pin=R10-2
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component Q1 BSS138LT1G
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component Q3 BSS138LT1G
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component Q4 BSS138LT1G
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component Q5 BSS138LT1G
