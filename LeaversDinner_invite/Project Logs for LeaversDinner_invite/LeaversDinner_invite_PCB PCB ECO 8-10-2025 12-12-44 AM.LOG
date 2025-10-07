@@ -1,0 +1,33 @@
+Added Component: Designator=SW1(SW-SMD_4P-L3.5-W3.0-P1.50-LS4.7)
+Add component (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "https://item.szlcsc.com/datasheet/TS-1185-W-4P-H1.8-160/54633806.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "TS-1185-W-4P-H1.8-160"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LCSC Part Name"; Value = "TS-1185-W-4P-H1.8-160"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "CAX(??)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part"; Value = "TS-1185-W-4P-H1.8-160"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Footprint"; Value = "SMD-4P,3.5x3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part"; Value = "C51927445"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "TS-1185-W-4P-H1.8-160"; VariantName = "[No Variations]"
+Added Component: Designator=SW2(SW-SMD_4P-L3.5-W3.0-P1.50-LS4.7)
+Add component (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "https://item.szlcsc.com/datasheet/TS-1185-W-4P-H1.8-160/54633806.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "TS-1185-W-4P-H1.8-160"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LCSC Part Name"; Value = "TS-1185-W-4P-H1.8-160"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "CAX(??)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part"; Value = "TS-1185-W-4P-H1.8-160"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Footprint"; Value = "SMD-4P,3.5x3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part"; Value = "C51927445"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "TS-1185-W-4P-H1.8-160"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GPIO15 Pin=SW1-1
+Added Pin To Net: NetName=GND Pin=SW1-3
+Added Pin To Net: NetName=GPIO14 Pin=SW2-1
+Added Pin To Net: NetName=GND Pin=SW2-3
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component Q4 BSS138LT1G
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component SW1 TS-1185-W-4P-H1.8-160
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component SW2 TS-1185-W-4P-H1.8-160
