@@ -2,8 +2,47 @@
 FileName = LeaversDinner_invite_PCB.GBR
 AutoAperture = True
 *************************************************************
-Generating : Top Pad Master
-      File : LeaversDinner_invite_PCB.GPT
+Generating : Mechanical 1
+      File : LeaversDinner_invite_PCB.GM1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D66
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : LeaversDinner_invite_PCB.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D10
+    D66
+*************************************************************
+
+*************************************************************
+Generating : Bottom Paste
+      File : LeaversDinner_invite_PCB.GBP
+
+    Adding Layer      : Bottom Paste
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+*************************************************************
+
+*************************************************************
+Generating : Top Paste
+      File : LeaversDinner_invite_PCB.GTP
+
+    Adding Layer      : Top Paste
 
     Adding Layer      : Top Layer
 
@@ -11,6 +50,8 @@ Generating : Top Pad Master
 
 
 Used DCodes :
+    D15
+    D16
     D17
     D18
     D19
@@ -23,23 +64,18 @@ Used DCodes :
     D26
     D27
     D28
+    D29
     D30
     D31
     D32
-    D57
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
+    D33
 *************************************************************
 
 *************************************************************
-Generating : Bottom Pad Master
-      File : LeaversDinner_invite_PCB.GPB
+Generating : Bottom Solder
+      File : LeaversDinner_invite_PCB.GBS
+
+    Adding Layer      : Bottom Solder
 
     Adding Layer      : Bottom Layer
 
@@ -47,38 +83,14 @@ Generating : Bottom Pad Master
 
 
 Used DCodes :
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-*************************************************************
-
-*************************************************************
-Generating : Bottom Overlay
-      File : LeaversDinner_invite_PCB.GBO
-
-    Adding Layer      : Bottom Overlay
-
-
-Used DCodes :
-    D12
-    D58
-*************************************************************
-
-*************************************************************
-Generating : Keep-Out Layer
-      File : LeaversDinner_invite_PCB.GKO
-
-    Adding Layer      : Keep-Out Layer
-
-
-Used DCodes :
-    D13
-    D69
+    D10
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+    D55
 *************************************************************
 
 *************************************************************
@@ -94,8 +106,9 @@ Generating : Top Solder
 
 Used DCodes :
     D20
-    D21
-    D33
+    D28
+    D29
+    D30
     D34
     D35
     D36
@@ -118,18 +131,13 @@ Used DCodes :
     D53
     D54
     D55
-    D56
 *************************************************************
 
 *************************************************************
-Generating : Bottom Paste
-      File : LeaversDinner_invite_PCB.GBP
+Generating : Bottom Overlay
+      File : LeaversDinner_invite_PCB.GBO
 
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
+    Adding Layer      : Bottom Overlay
 
 
 Used DCodes :
@@ -148,19 +156,61 @@ Used DCodes :
     D12
     D13
     D14
-    D15
-    D16
 *************************************************************
 
 *************************************************************
-Generating : Mechanical 1
-      File : LeaversDinner_invite_PCB.GM1
+Generating : Top Pad Master
+      File : LeaversDinner_invite_PCB.GPT
 
-    Adding Layer      : Mechanical 1
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D69
+    D15
+    D16
+    D17
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
+    D24
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D56
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
+*************************************************************
+
+*************************************************************
+Generating : Bottom Pad Master
+      File : LeaversDinner_invite_PCB.GPB
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D59
+    D60
+    D61
+    D62
+    D63
+    D64
 *************************************************************
 
 *************************************************************
@@ -173,18 +223,15 @@ Generating : Bottom Layer
 
 
 Used DCodes :
-    D10
     D12
-    D58
+    D57
+    D59
     D60
     D61
     D62
     D63
     D64
     D65
-    D66
-    D67
-    D68
 *************************************************************
 
 *************************************************************
@@ -198,8 +245,10 @@ Generating : Top Layer
 
 Used DCodes :
     D10
+    D11
     D12
-    D13
+    D15
+    D16
     D17
     D18
     D19
@@ -208,13 +257,15 @@ Used DCodes :
     D22
     D23
     D24
-    D25
     D26
     D27
     D28
+    D29
     D30
     D31
     D32
+    D33
+    D56
     D57
     D58
     D59
@@ -224,62 +275,6 @@ Used DCodes :
     D63
     D64
     D65
-    D66
-    D67
-    D68
-*************************************************************
-
-*************************************************************
-Generating : Bottom Solder
-      File : LeaversDinner_invite_PCB.GBS
-
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D48
-    D49
-    D50
-    D51
-    D52
-    D53
-    D54
-    D55
-    D56
-*************************************************************
-
-*************************************************************
-Generating : Top Paste
-      File : LeaversDinner_invite_PCB.GTP
-
-    Adding Layer      : Top Paste
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D17
-    D18
-    D19
-    D20
-    D21
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
 *************************************************************
 
 *************************************************************
@@ -288,6 +283,6 @@ Generating : Profile
 
 
 Used DCodes :
-    D70
+    D67
 *************************************************************
 

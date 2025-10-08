@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GPIO21 Pin=R6-2
+Removed Pin From Net: NetName=GPIO22 Pin=R7-2
+Removed Pin From Net: NetName=GPIO24 Pin=R9-2
+Removed Pin From Net: NetName=GPIO25 Pin=R10-2
+Added Pin To Net: NetName=GPIO25 Pin=R6-2
+Added Pin To Net: NetName=GPIO24 Pin=R7-2
+Added Pin To Net: NetName=GPIO22 Pin=R9-2
+Added Pin To Net: NetName=GPIO21 Pin=R10-2
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component Q4 BSS138LT1G

@@ -1,0 +1,32 @@
+Change Component Footprint: Designator=C14 Old Footprint=SMD-0402C New Footprint=C0805
+Change Component Footprint: Designator=C15 Old Footprint=SMD-0402C New Footprint=C0805
+Change Component Comment : Designator=C14 Old Comment=1µF New Comment=CCAP0805
+Change Component Comment : Designator=C15 Old Comment=1µF New Comment=CCAP0805
+Change Managed Component Library Link : Designator=C14 Old VaultGUID= New VaultGUID=45473775-384D-4A7E-9460-2FC0B2C9BA85 Old ItemGUID= New ItemGUID=3247ECA5-E982-4ECC-B974-BDA98D780578 Old RevisionGUID= New RevisionGUID=4c2bae9a-ade0-41df-9b79-aa44c84b69ce
+Change Managed Component Library Link : Designator=C15 Old VaultGUID= New VaultGUID=45473775-384D-4A7E-9460-2FC0B2C9BA85 Old ItemGUID= New ItemGUID=3247ECA5-E982-4ECC-B974-BDA98D780578 Old RevisionGUID= New RevisionGUID=4c2bae9a-ade0-41df-9b79-aa44c84b69ce
+Change component parameters: Designator = "C14" ("C14"); Footprint = "SMD-0402C"; UniqueID = "\ABLEXFKE" ("\ABLEXFKE")
+Change component parameters (AddParameter): Name = "Capacitor Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Design Item ID"; Value = "CCAP0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Source"; Value = "CommonSymbols_V1.SchLib"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C15" ("C15"); Footprint = "SMD-0402C"; UniqueID = "\HXOGGSEC" ("\HXOGGSEC")
+Change component parameters (AddParameter): Name = "Capacitor Type"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Design Item ID"; Value = "CCAP0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mounting Technology"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pins"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Source"; Value = "CommonSymbols_V1.SchLib"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = ""; VariantName = "[No Variations]"
