@@ -1,0 +1,64 @@
+Removed Pin From Net: NetName=GPIO15 Pin=SW1-1
+Removed Pin From Net: NetName=GPIO15 Pin=SW1-2
+Removed Pin From Net: NetName=GND Pin=SW1-3
+Removed Pin From Net: NetName=GND Pin=SW1-4
+Removed Pin From Net: NetName=GPIO14 Pin=SW2-1
+Removed Pin From Net: NetName=GPIO14 Pin=SW2-2
+Removed Pin From Net: NetName=GND Pin=SW2-3
+Removed Pin From Net: NetName=GND Pin=SW2-4
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=SW1
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=SW2
+Added Component: Designator=PB1(SW-SMD_YZA-021)
+Add component (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ApplicableTemperatureRange"; Value = "-10°C to +60°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ButtonShape"; Value = "Rectangle button"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Circuit"; Value = "SPST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "https://item.szlcsc.com/datasheet/YZA-021/51487234.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Installation Method"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LCSC Part Name"; Value = "YIZHI(??) YZA-021 2*4*3.5MM??????"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "YIZHI(??)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RatedCurrent"; Value = "50mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "StorageTemperatureRange"; Value = "-40°C to +80°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Footprint"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part"; Value = "C49108617"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switch Size"; Value = "2*4*3.5MM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Tactile Switch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "WorkingLife"; Value = "50,000 Cycles"; VariantName = "[No Variations]"
+Added Component: Designator=PB2(SW-SMD_YZA-021)
+Add component (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ApplicableTemperatureRange"; Value = "-10°C to +60°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ButtonShape"; Value = "Rectangle button"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Circuit"; Value = "SPST"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "https://item.szlcsc.com/datasheet/YZA-021/51487234.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Installation Method"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LCSC Part Name"; Value = "YIZHI(??) YZA-021 2*4*3.5MM??????"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "YIZHI(??)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RatedCurrent"; Value = "50mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "StorageTemperatureRange"; Value = "-40°C to +80°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Footprint"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part"; Value = "C49108617"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Switch Size"; Value = "2*4*3.5MM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "YZA-021"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Tactile Switch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "WorkingLife"; Value = "50,000 Cycles"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=PB1-1
+Added Pin To Net: NetName=GPIO15 Pin=PB1-2
+Added Pin To Net: NetName=GND Pin=PB1-3
+Added Pin To Net: NetName=GND Pin=PB1-4
+Added Pin To Net: NetName=GND Pin=PB2-1
+Added Pin To Net: NetName=GPIO14 Pin=PB2-2
+Added Pin To Net: NetName=GND Pin=PB2-3
+Added Pin To Net: NetName=GND Pin=PB2-4
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component PB1 YZA-021
+Added Member To Class: ClassName=LeaversDinner_invite_Sch Member=Component PB2 YZA-021

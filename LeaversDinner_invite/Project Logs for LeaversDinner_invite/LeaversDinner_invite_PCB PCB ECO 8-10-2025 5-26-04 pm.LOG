@@ -1,0 +1,25 @@
+Removed Pin From Net: NetName=GND Pin=Q1-2
+Removed Pin From Net: NetName=NetD1_1 Pin=Q1-3
+Removed Pin From Net: NetName=GND Pin=Q2-2
+Removed Pin From Net: NetName=NetD6_1 Pin=Q2-3
+Removed Pin From Net: NetName=GND Pin=Q3-2
+Removed Pin From Net: NetName=NetD11_1 Pin=Q3-3
+Removed Pin From Net: NetName=GND Pin=Q4-2
+Removed Pin From Net: NetName=NetD16_1 Pin=Q4-3
+Removed Pin From Net: NetName=GND Pin=Q5-2
+Removed Pin From Net: NetName=NetD21_1 Pin=Q5-3
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=Q1
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=Q2
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=Q3
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=Q4
+Removed Member From Class: ClassName=LeaversDinner_invite_Sch Member=Q5
+Added Pin To Net: NetName=NetD21_1 Pin=U1-27
+Added Pin To Net: NetName=NetD11_1 Pin=U1-28
+Added Pin To Net: NetName=NetD6_1 Pin=U1-29
+Added Pin To Net: NetName=NetD1_1 Pin=U1-30
+Added Pin To Net: NetName=NetD16_1 Pin=U1-31
+Change Net Name : Old Net Name=NetD1_1 New Net Name=GPIO19
+Change Net Name : Old Net Name=NetD6_1 New Net Name=GPIO18
+Change Net Name : Old Net Name=NetD11_1 New Net Name=GPIO17
+Change Net Name : Old Net Name=NetD16_1 New Net Name=GPIO20
+Change Net Name : Old Net Name=NetD21_1 New Net Name=GPIO16
