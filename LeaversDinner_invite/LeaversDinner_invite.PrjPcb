@@ -219,6 +219,14 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for LeaversDinner_invite\LeaversDinner_invite_PCB.RUL
 DItemRevisionGUID=
 
+[GeneratedDocument22]
+DocumentPath=Project Outputs for LeaversDinner_invite\Pick Place for LeaversDinner_invite_PCB.csv
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Project Outputs for LeaversDinner_invite\Pick Place for LeaversDinner_invite_PCB.txt
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
