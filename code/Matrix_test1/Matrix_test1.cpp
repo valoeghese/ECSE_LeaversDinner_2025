@@ -1,30 +1,16 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
+#include <string.h>
+#include "matrix_display.hpp"
+#include "pindefs.hpp"
+#include "pico_flash.hpp"
 
-// LED MATRIX COLUMNS ARE POSITIVE, ROWS ARE NEGATIVE
-#define LED_C1 25
-#define LED_C2 24
-#define LED_C3 23
-#define LED_C4 22
-#define LED_C5 21
 
-#define MASK_ALL_COLS ((1<<LED_C1)|(1<<LED_C2)|(1<<LED_C3)|(1<<LED_C4)|(1<<LED_C5))
 
-#define LED_R1 16
-#define LED_R2 17
-#define LED_R3 18
-#define LED_R4 19
-#define LED_R5 20
 
-#define MASK_ALL_ROWS ((1<<LED_R1)|(1<<LED_R2)|(1<<LED_R3)|(1<<LED_R4)|(1<<LED_R5))
 
-#define PB1 15
-#define PB2 14
 
-int main()
-{
-    stdio_init_all();
-
+void init_gpio(void){
     gpio_init_mask(MASK_ALL_COLS|MASK_ALL_ROWS);
     gpio_set_dir_masked(MASK_ALL_COLS|MASK_ALL_ROWS, MASK_ALL_COLS|MASK_ALL_ROWS);
     gpio_put_masked(MASK_ALL_ROWS,MASK_ALL_ROWS);
@@ -37,19 +23,37 @@ int main()
     gpio_set_dir(PB2,0);
     gpio_pull_up(PB1);
     gpio_pull_up(PB2);
-    
+}
+
+uint counter = 0;
+const uint8_t * current_char;
+const char * testString = "Campbell Wright ";
+
+char stringBuffer[64] = {0};
+int main()
+{
+    stdio_init_all();
+    init_gpio();
+    read_name_from_flash(stringBuffer);
+
     while (true) {
-        //printf("Hello, world!\n");
-        if(gpio_get(PB1)){
-            gpio_set_dir_masked((1<<LED_R1)|(1<<LED_R2), (1<<LED_R2));
-            gpio_put_masked((1<<LED_C1)|(1<<LED_C2), (1<<LED_C1));
+        static bool pb1_last = 1;
+        bool pb1_val = gpio_get(PB1);
+        if((pb1_val == 0)&&(pb1_last != pb1_val)){
+            counter = (counter+1) % strlen(stringBuffer);
+        }
+        pb1_last = pb1_val;
+        if(gpio_get(PB2)){
+            current_char=char_to_matrix(stringBuffer[counter]);
         }
         else{
-            gpio_set_dir_masked((1<<LED_R1)|(1<<LED_R2), (1<<LED_R1));
-            gpio_put_masked((1<<LED_C1)|(1<<LED_C2), (1<<LED_C2));
+            current_char = char_to_matrix(128);
         }
-        sleep_us(20);
-
-    
+        for(int i = 0; i < 100; i++){
+            disp_char(current_char); 
+            //This is janky - ISRs were being weird so we just do 100 display cycles for every button poll
+            //which means our polling rate is worst case 100us*25*100 = 250ms.
+            //if ISRs still funky maybe throw this on core 1? would be cool and leave core 0 available for user code/polling.
+        }
     }
 }

@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Matrix_test1 Matrix_test1.cpp )
+add_executable(Matrix_test1 Matrix_test1.cpp matrix_display.cpp pico_flash.cpp)
 
 pico_set_program_name(Matrix_test1 "Matrix_test1")
 pico_set_program_version(Matrix_test1 "0.1")
@@ -43,6 +43,8 @@ pico_set_program_version(Matrix_test1 "0.1")
 # Modify the below lines to enable/disable output over UART/USB
 pico_enable_stdio_uart(Matrix_test1 0)
 pico_enable_stdio_usb(Matrix_test1 1)
+
+pico_set_linker_script(Matrix_test1 ${CMAKE_SOURCE_DIR}/memmap_custom.ld)
 
 # Add the standard library to the build
 target_link_libraries(Matrix_test1
