@@ -90,12 +90,23 @@ inline void set_led(uint x, uint y){
     sleep_us(LED_period_us);
 }
 
+inline void clear_led(uint x, uint y){
+    static const uint rows[] = {LED_R1,LED_R2,LED_R3,LED_R4,LED_R5};
+    static const uint cols[] = {LED_C1,LED_C2,LED_C3,LED_C4,LED_C5};
+    gpio_put_masked(MASK_ALL_COLS|MASK_ALL_ROWS, MASK_ALL_ROWS);
+    sleep_us(LED_period_us);
+}
+
 void disp_char(const uint8_t * character){
     for(uint8_t i = 0; i < 5; i++){ 
         for(uint8_t j = 0; j < 5; j++){
             if((character[i]>>(4-j))&0x01){
                 set_led(j,i);
             } 
+            if((i==4)&&(j==4)&&(!((character[i]>>(4-j))&0x01))){
+                clear_led(j,i);
+            }
         }
     }
+    
 }

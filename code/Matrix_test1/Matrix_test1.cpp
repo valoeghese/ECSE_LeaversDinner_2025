@@ -5,7 +5,7 @@
 #include "pindefs.hpp"
 #include "pico_flash.hpp"
 
-
+#define STR_BUFFER_LEN 128
 
 
 
@@ -27,15 +27,18 @@ void init_gpio(void){
 
 uint counter = 0;
 const uint8_t * current_char;
-const char * testString = "Campbell Wright ";
+//const char * testString = ;
 
-char stringBuffer[64] = {0};
+char stringBuffer[STR_BUFFER_LEN] = "Campbell Wright ";
+char tempBuffer[STR_BUFFER_LEN] = {0};
+uint8_t tempBufferIdx = 0;
 int main()
 {
     stdio_init_all();
     init_gpio();
-    read_name_from_flash(stringBuffer);
-
+    read_name_from_flash(stringBuffer, STR_BUFFER_LEN);
+    printf("hello, world!");
+    
     while (true) {
         static bool pb1_last = 1;
         bool pb1_val = gpio_get(PB1);
@@ -55,5 +58,24 @@ int main()
             //which means our polling rate is worst case 100us*25*100 = 250ms.
             //if ISRs still funky maybe throw this on core 1? would be cool and leave core 0 available for user code/polling.
         }
+        char inChar = getchar_timeout_us(10);
+        if(inChar != 0xFE){
+            if(inChar != '\n'){
+                tempBuffer[tempBufferIdx] = inChar;
+                tempBufferIdx++;
+            }
+            else{
+                tempBuffer[tempBufferIdx] = 0;
+                printf("Displaying String \"%s\"\n", tempBuffer);
+                memccpy(stringBuffer, tempBuffer, 0, 64);
+                uint rc = write_name_to_flash(stringBuffer);
+                if(!rc){
+                    printf("wrote string \"%s\" (%d bytes) to flash\n", stringBuffer, strlen(stringBuffer)+1);
+                }
+                counter = 0;
+                tempBufferIdx = 0;
+            }
+        }
+        
     }
 }
