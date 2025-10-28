@@ -36,6 +36,9 @@ extern uint32_t ADDR_PERSISTENT[];
     return ADDR_PERSISTENT;
 }
 uint32_t read_name_from_flash(char * buffer, uint maxlen) {
+    if(((uint8_t*)getAddressPersistent())[0] = 0xFF){
+        return 0;
+    }
     memccpy(buffer, ((uint8_t*)getAddressPersistent()), 0,maxlen);
     return strlen(buffer);
 }
