@@ -62,6 +62,12 @@ void scroll_screen(void){
     }
 }
 
+void screen_start(void){
+    const uint8_t * disp_char = char_to_matrix(strings[display_mode][counter]);
+    add_char_to_scroll(disp_char);
+    scroll_count=5-((disp_char[0]&0xE0)>>5); //3MSB of first col of char = length (0-7)
+}
+
 repeating_timer_t scroll_timer = {0};
 bool scroll_timer_cb(repeating_timer_t * timer){
     scroll_screen();
@@ -91,6 +97,7 @@ int main()
     stdio_init_all();
     init_gpio();
     read_name_from_flash(userStringBuffer, STR_BUFFER_LEN);
+    screen_start();
     printf("hello, world!");
     add_repeating_timer_ms(-100,scroll_timer_cb,0,&scroll_timer);
     
@@ -103,12 +110,14 @@ int main()
                 display_mode = EASTER;
                 counter = 0;
                 const uint8_t * disp_char = char_to_matrix(strings[display_mode][counter]);
+                add_char_to_scroll_start(disp_char);
                 add_char_to_scroll(disp_char);
                 scroll_count=5-((disp_char[0]&0xE0)>>5); //3MSB of first col of char = length (0-7)
             }else if((pb1_val == 0)){
                 display_mode = ECSE;
                 counter = 0;
                 const uint8_t * disp_char = char_to_matrix(strings[display_mode][counter]);
+                add_char_to_scroll_start(disp_char);
                 add_char_to_scroll(disp_char);
                 scroll_count=5-((disp_char[0]&0xE0)>>5); //3MSB of first col of char = length (0-7)
                 print_info();
@@ -116,6 +125,7 @@ int main()
                 display_mode = USER;
                 counter = 0;
                 const uint8_t * disp_char = char_to_matrix(strings[display_mode][counter]);
+                add_char_to_scroll_start(disp_char);
                 add_char_to_scroll(disp_char);
                 scroll_count=5-((disp_char[0]&0xE0)>>5); //3MSB of first col of char = length (0-7)
             }
