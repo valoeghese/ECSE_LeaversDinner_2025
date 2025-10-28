@@ -94,6 +94,8 @@ void print_info(void){
 
 int main()
 {
+    tempBuffer[0] = ' ';
+    tempBufferIdx = 1;
     stdio_init_all();
     init_gpio();
     read_name_from_flash(userStringBuffer, STR_BUFFER_LEN);
