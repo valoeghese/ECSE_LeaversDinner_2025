@@ -35,8 +35,8 @@ static uint8_t shapes[] = {
 };
 
 static bool AlignWidth(void) {
-    uint8_t smallest_x = 1;
-    uint8_t largest_x = 1;
+    uint8_t smallest_x = 2;
+    uint8_t largest_x = 2;
 
     for (uint8_t y = 0; y < SHAPE_SIZE; y++) {
         for (uint8_t x = 0; x < SHAPE_SIZE; x++) {
