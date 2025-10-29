@@ -127,25 +127,6 @@ static void RotateShape(void)
     AlignWidth();
 }
 
-// Implementation
-static void OnButtonPress(gpio_input in)
-{
-    if (in == I_PB1) {
-        RotateShape();
-    }
-    if (in == I_PB2) {
-        input_x--;
-        if (input_x == (uint8_t)255) {
-            input_x = 4;
-        }
-
-        // wrap without allowing partial
-        if (AlignWidth()) {
-            input_x = 4;
-        }
-    }
-}
-
 static bool IsShapeColliding(void)
 {
     for (int8_t x = 0; x < 5; x++) {
@@ -168,6 +149,30 @@ static bool IsShapeColliding(void)
     }
 
     return false;
+}
+
+// Implementation
+static void OnButtonPress(gpio_input in)
+{
+    if (in == I_PB1) {
+        RotateShape();
+    }
+    if (in == I_PB2) {
+        uint8_t original_input_x = input_x;
+
+        do {
+            input_x--;
+            if (input_x == (uint8_t)255) {
+                input_x = 4;
+            }
+
+            // wrap without allowing partial
+            if (AlignWidth()) {
+                input_x = 4;
+            }
+            // prevent collision in placement
+        } while (IsShapeColliding() && input_x != original_input_x);        
+    }
 }
 
 static void OnTick(void)
