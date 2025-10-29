@@ -213,7 +213,7 @@ static void OnTick(void)
                 for (uint8_t y = 0; y < WORLD_SIZE; y++) {
                     if ((deletion_rows >> y) & 1) {
                         for (uint8_t x = 0; x < WORLD_SIZE; x++) {
-                            world[x][y] = (prescaler & 4) >> 2; // '? 1 : 0' as bitshift right
+                            world[x][y] = (prescaler & 2) >> 1; // '? 1 : 0' as bitshift right
                         }
                     }
                 }
