@@ -30,11 +30,11 @@ static uint8_t shapes[] = {
     0b100111  // \--
 };
 
-static void AlignWidth(void) {
+static bool AlignWidth(void) {
     uint8_t smallest_x = 1;
     uint8_t largest_x = 1;
 
-    for (uint8_t y = 0; y < 2; y++) {
+    for (uint8_t y = 0; y < 3; y++) {
         for (uint8_t x = 0; x < 3; x++) {
             if (input_shape[x][y]) {
                 if (x < smallest_x) {
@@ -52,7 +52,10 @@ static void AlignWidth(void) {
     // lock to left
     if (input_x < input_width - 1) {
         input_x = input_width - 1;
+        return true;
     }
+
+    return false;
 }
 
 static void AlignBottomRight(void)
@@ -121,7 +124,7 @@ static void RotateShape(void)
 
     // Align
     AlignBottomRight();
-    //AlignWidth();
+    AlignWidth();
 }
 
 // Implementation
@@ -133,7 +136,12 @@ static void OnButtonPress(gpio_input in)
     if (in == I_PB2) {
         input_x--;
         if (input_x == (uint8_t)255) {
-            input_x = 5;
+            input_x = 4;
+        }
+
+        // wrap without allowing partial
+        if (AlignWidth()) {
+            input_x = 4;
         }
     }
 }
