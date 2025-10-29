@@ -27,6 +27,9 @@ static uint8_t input_x = 0;
 static uint8_t input_y = 0;
 static uint8_t input_width = 0;
 
+// block counter
+static uint16_t score = 0;
+
 static uint8_t shapes[] = {
     0b000111, // ---
     0b001111, // --/
@@ -221,7 +224,7 @@ static void OnTick(void)
                 }
             }
         }
-    } else if (++prescaler == 15) {
+    } else if (++prescaler == (score > 35 ? 4 : (15 - (score / 3)))) {
         prescaler = 0;
 
         // Check if would fall onto solid ground
@@ -254,7 +257,11 @@ static void OnTick(void)
                 }
             }
 
+            // 1 block placed = +1 score
+            score++;
+
             // Check for destroyed rows
+            // If we had actual score I would add to it here, separate to block count
             for (int8_t y = 0; y < WORLD_SIZE; y++) {
                 uint8_t count = 0;
                 for (int8_t x = 0; x < WORLD_SIZE; x++) {
@@ -321,6 +328,7 @@ void InitTetris(void)
 {
     // Clear world
     memset(world, 0, 5 * 5);
+    score = 0;
     // Load initial shape
     LoadShape(xorshift64star() & 3);
 }
