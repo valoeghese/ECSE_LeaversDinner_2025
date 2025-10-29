@@ -156,7 +156,12 @@ static bool IsShapeColliding(void)
 static void OnButtonPress(gpio_input in)
 {
     if (in == I_PB1) {
-        RotateShape();
+        uint8_t rotate_counter = 0;
+        
+        do {
+            RotateShape();
+            rotate_counter++;
+        } while (IsShapeColliding() && rotate_counter < 4);
     }
     if (in == I_PB2) {
         uint8_t original_input_x = input_x;
