@@ -89,7 +89,43 @@ void print_info(void){
     printf("---------------------------------------\n");
 }
 
+bool Smooth(const bool raw, bool * const arr18)
+{
+#define idx ((unsigned char*)arr18)[16]
+#define val (arr18[17])
+    arr18[idx] = raw;
+    uint8_t notVal = !val;
 
+    // probably saves a nanosecond over a loop
+    if (
+        arr18[0] == notVal &&
+        arr18[1] == notVal &&
+        arr18[2] == notVal &&
+        arr18[3] == notVal &&
+        arr18[4] == notVal &&
+        arr18[5] == notVal &&
+        arr18[6] == notVal &&
+        arr18[7] == notVal &&
+        arr18[8] == notVal &&
+        arr18[9] == notVal &&
+        arr18[10] == notVal &&
+        arr18[11] == notVal &&
+        arr18[12] == notVal &&
+        arr18[13] == notVal &&
+        arr18[14] == notVal &&
+        arr18[15] == notVal
+    ) {
+        val = notVal;
+    }
+
+    // increment
+    idx++;
+    idx &= 0xF;
+
+    return val;
+}
+#undef idx
+#undef val
 
 int main()
 {
@@ -103,9 +139,14 @@ int main()
     add_repeating_timer_ms(-100,scroll_timer_cb,0,&scroll_timer);
     
     while (true) {
+        static bool pb1_arr[18];
+        static bool pb2_arr[18];
+
         static bool pb1_last = 1, pb2_last = 1;
-        bool pb1_val = gpio_get(PB1);
-        bool pb2_val = gpio_get(PB2);
+        
+        bool pb1_val = gpio_get(PB1);// Smooth(gpio_get(PB1), pb1_arr);
+        bool pb2_val = gpio_get(PB2);//Smooth(gpio_get(PB2), pb2_arr);
+
         if((pb1_last != pb1_val)||(pb2_last!=pb2_val)){
             if((pb1_val==0) &&(pb2_val ==0)){
                 display_mode = EASTER;
