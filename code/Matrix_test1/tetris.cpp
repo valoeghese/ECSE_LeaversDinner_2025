@@ -35,6 +35,7 @@ static uint8_t shapes[] = {
 };
 
 static bool AlignWidth(void) {
+    // assume aligned right, anchor bottom right
     uint8_t smallest_x = 2;
     uint8_t largest_x = 2;
 
@@ -44,15 +45,11 @@ static bool AlignWidth(void) {
                 if (x < smallest_x) {
                     smallest_x = x;
                 }
-                if (x > largest_x) {
-                    largest_x = x;
-                }
             }
         }
     }
 
     input_width = largest_x - smallest_x + 1;
-    // assume aligned right, anchor bottom right
     // lock to left
     if (input_x < input_width - 1) {
         input_x = input_width - 1;
