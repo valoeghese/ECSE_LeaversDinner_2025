@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "matrix_display.hpp"
+#include "random.hpp"
 
 // Axes: v ->
 static uint8_t screen[] = {
@@ -101,7 +102,7 @@ static void LoadShape(uint8_t idx)
     input_shape[1][0] = 0;
     input_shape[2][0] = 0;
 
-    input_y = 3;
+    input_y = 0;
     input_x = 2;
     AlignWidth();
 }
@@ -139,7 +140,15 @@ static void OnButtonPress(gpio_input in)
 
 static void OnTick(void)
 {
+    static uint8_t prescaler = 0;
     
+    if (++prescaler == 15) {
+        prescaler = 0;
+        input_y++;
+        if (input_y > 5) {
+            current_behaviour = default_behav;
+        }
+    }
 }
 
 static void OnPreRender(void)
@@ -183,5 +192,5 @@ struct behaviour tetris_behaviour = {
 
 void InitTetris(void)
 {
-    LoadShape(1);
+    LoadShape(xorshift64star() & 3);
 }

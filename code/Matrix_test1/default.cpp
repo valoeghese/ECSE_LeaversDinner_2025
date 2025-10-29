@@ -9,6 +9,7 @@
 #include "pindefs.hpp"
 
 #include "tetris.hpp"
+#include "random.hpp"
 
 enum disp_mode{
     USER = 0,
@@ -44,6 +45,8 @@ static void OnButtonPress(gpio_input in)
     switch (in) {
     case I_PB1:
     // enter tetris
+        xorshift64seed(time_us_32());
+        InitTetris(); // set up tetris
         current_behaviour = tetris_behaviour;
         break;
     case I_PB2:

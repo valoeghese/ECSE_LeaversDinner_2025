@@ -7,7 +7,6 @@
 #include "pico/multicore.h"
 
 #include "default.hpp"
-#include "tetris.hpp"
 
 void init_gpio(void){
     gpio_init_mask(MASK_ALL_COLS|MASK_ALL_ROWS);
@@ -118,7 +117,6 @@ int main()
     stdio_init_all();
     init_gpio();
     DefaultBehaviourInit();
-    InitTetris();
     printf("hello, world!");
     add_repeating_timer_ms(-100,scroll_timer_cb,0,&scroll_timer);
     multicore_launch_core1(Poll);

@@ -1,3 +1,7 @@
+#include "random.hpp"
+
+#include <stdint.h>
+
 // xorshift64* PRNG
 static uint64_t prng_state = 0;
 uint64_t xorshift64star() {
