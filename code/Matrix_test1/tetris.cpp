@@ -6,6 +6,10 @@
 #include "matrix_display.hpp"
 #include "random.hpp"
 
+// TODO finish refactoring to use these macros for flexibility
+#define WORLD_SIZE 5
+#define SHAPE_SIZE 3
+
 // Axes: v ->
 static uint8_t screen[] = {
     0b00000,
@@ -16,8 +20,8 @@ static uint8_t screen[] = {
 };
 
 // [x][y]
-static uint8_t world[5][5] = { 0 };
-static uint8_t input_shape[3][3] = { 0 };
+static uint8_t world[WORLD_SIZE][WORLD_SIZE] = { 0 };
+static uint8_t input_shape[SHAPE_SIZE][SHAPE_SIZE] = { 0 };
 // bottom right of shape0.
 static uint8_t input_x = 0;
 static uint8_t input_y = 0;
@@ -34,8 +38,8 @@ static bool AlignWidth(void) {
     uint8_t smallest_x = 1;
     uint8_t largest_x = 1;
 
-    for (uint8_t y = 0; y < 3; y++) {
-        for (uint8_t x = 0; x < 3; x++) {
+    for (uint8_t y = 0; y < SHAPE_SIZE; y++) {
+        for (uint8_t x = 0; x < SHAPE_SIZE; x++) {
             if (input_shape[x][y]) {
                 if (x < smallest_x) {
                     smallest_x = x;
@@ -114,13 +118,13 @@ static void RotateShape(void)
 {
     uint8_t temp_shape[3][3] = { 0 };
     // rotate into temp_shape
-    for (uint8_t y = 0; y < 3; y++) {
-        for (uint8_t x = 0; x < 3; x++) {
+    for (uint8_t y = 0; y < SHAPE_SIZE; y++) {
+        for (uint8_t x = 0; x < SHAPE_SIZE; x++) {
             temp_shape[x][y] = input_shape[2 - y][x];
         }
     }
     // memcpy
-    memcpy(input_shape, temp_shape, 3 * 3);
+    memcpy(input_shape, temp_shape, SHAPE_SIZE * SHAPE_SIZE);
 
     // Align
     AlignBottomRight();
@@ -129,8 +133,8 @@ static void RotateShape(void)
 
 static bool IsShapeColliding(void)
 {
-    for (int8_t x = 0; x < 5; x++) {
-        for (int8_t y = 0; y < 5; y++) {
+    for (int8_t x = 0; x < WORLD_SIZE; x++) {
+        for (int8_t y = 0; y < WORLD_SIZE; y++) {
             // Check if world has tile at this position
             if (world[x][y]) {
                 // Get position on input tile
@@ -175,11 +179,47 @@ static void OnButtonPress(gpio_input in)
     }
 }
 
+//TODO collision detection for new blocks loaded on first fall so they don't clip
 static void OnTick(void)
 {
+    static uint8_t deletion_rows = 0;
     static uint8_t prescaler = 0;
-    
-    if (++prescaler == 15) {
+
+    // Give animation priority
+    if (deletion_rows) {
+        if ((++prescaler)) {
+            // After 10 iterations of animation, finish.
+            if (prescaler == 10){
+                // remove cleared rows (top to bottom)
+                for (uint8_t y = 0; y < WORLD_SIZE; y++) {
+                    if ((deletion_rows >> y) & 1) {
+                        // shift down each column
+                        for (uint8_t x = 0; x < WORLD_SIZE; x++) {
+                            for (uint8_t yy = y; yy >= 1; yy--) {
+                                world[x][yy] = world[x][yy - 1];
+                            }
+                            world[x][0] = 0;
+                        }
+                    }
+                }    
+
+                // reset and go back to normal gameplay
+                prescaler = 0;
+                deletion_rows = 0;
+                // load new random shape
+                LoadShape(xorshift64star() & 3);
+            } else {
+                // blink
+                for (uint8_t y = 0; y < WORLD_SIZE; y++) {
+                    if ((deletion_rows >> y) & 1) {
+                        for (uint8_t x = 0; x < WORLD_SIZE; x++) {
+                            world[x][y] = (prescaler & 4) >> 2; // '? 1 : 0' as bitshift right
+                        }
+                    }
+                }
+            }
+        }
+    } else if (++prescaler == 15) {
         prescaler = 0;
 
         // Check if would fall onto solid ground
@@ -194,14 +234,14 @@ static void OnTick(void)
 
         // place block if on solid ground
         if (solid_ground) {
-            for (int8_t x = 0; x < 3; x++) {
-                for (int8_t y = 0; y < 3; y++) {
+            for (int8_t x = 0; x < SHAPE_SIZE; x++) {
+                for (int8_t y = 0; y < SHAPE_SIZE; y++) {
                     if (input_shape[x][y]) {
                         int8_t world_x = x + (int8_t)input_x - 2;
                         int8_t world_y = y + (int8_t)input_y - 2;
 
                         // assume x is not outside bounds
-                        if (world_y < 0 || world_y >= 5) {
+                        if (world_y < 0 || world_y >= WORLD_SIZE) {
                             // Game Over
                             current_behaviour = default_behav;
                             return;
@@ -212,8 +252,26 @@ static void OnTick(void)
                 }
             }
 
-            // load new tile
-            LoadShape(xorshift64star() & 3);
+            // Check for destroyed rows
+            for (int8_t y = 0; y < WORLD_SIZE; y++) {
+                uint8_t count = 0;
+                for (int8_t x = 0; x < WORLD_SIZE; x++) {
+                    if (world[x][y]) {
+                        count++;
+                    }
+                }
+
+                if (count == WORLD_SIZE) {
+                    deletion_rows |= (1 << y);
+                }
+            }
+
+            // if no animation load new shape immediately
+            if (!deletion_rows) {
+                LoadShape(xorshift64star() & 3);
+            } else {
+                input_y = 200; // don't render
+            }
         }     
     }
 }

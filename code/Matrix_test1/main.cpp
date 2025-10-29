@@ -130,12 +130,12 @@ int main()
 
         current_behaviour.PreRender();
 
-        for(int i = 0; i < 100; i++)
+        // Camby noted ISRs were being weird so does renders in this function.
+        // do 20 display cycles for each input handling
+        // rate is worst case 100us*25*20 = 50ms.
+        for(int i = 0; i < 50; i++)
         {
-            current_behaviour.DrawFrame();    
-            //This is janky - ISRs were being weird so we just do 100 display cycles for every button poll
-            //which means our polling rate is worst case 100us*25*100 = 250ms.
-            //if ISRs still funky maybe throw this on core 1? would be cool and leave core 0 available for user code/polling.
+            current_behaviour.DrawFrame();
         }
 
         current_behaviour.PostRender();
