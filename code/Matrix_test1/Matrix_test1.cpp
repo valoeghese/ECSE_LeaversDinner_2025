@@ -5,10 +5,10 @@
 #include "pindefs.hpp"
 #include "pico_flash.hpp"
 #include "clw_dbgutils.h"
+#include "pico/multicore.h"
+#include "music.hpp"
+
 #define STR_BUFFER_LEN 128
-
-
-
 
 void init_gpio(void){
     gpio_init_mask(MASK_ALL_COLS|MASK_ALL_ROWS);
@@ -86,7 +86,7 @@ void print_info(void){
     printf("github.com/campbelllwright/ECSE_LeaversDinner_2025\n");
     printf("--------------------------------------------------\n");
     printf(" - PCB by : Campbell Wright, James West\n");
-    printf(" - Code by: Campbell Wright\n");
+    printf(" - Code by: Campbell Wright, Mekal Covic\n");
     printf("---------------------------------------\n");
 }
 
@@ -102,6 +102,7 @@ int main()
     screen_start();
     printf("hello, world!");
     add_repeating_timer_ms(-100,scroll_timer_cb,0,&scroll_timer);
+    multicore_launch_core1(core1MusicMain);
     
     while (true) {
         static bool pb1_last = 1, pb2_last = 1;
