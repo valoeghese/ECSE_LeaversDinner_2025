@@ -125,7 +125,8 @@ int main()
                 scroll_count=5-((disp_char[0]&0xE0)>>5); //3MSB of first col of char = length (0-7)
                 print_info();
             }else if(pb2_val == 0){
-                display_mode = USER;
+                static bool toggle = 0;
+                display_mode = (toggle ^= 1) ? USER : ECSE;
                 counter = 0;
                 const uint8_t * disp_char = char_to_matrix(strings[display_mode][counter]);
                 add_char_to_scroll_start(disp_char);

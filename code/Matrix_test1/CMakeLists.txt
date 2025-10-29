@@ -35,9 +35,9 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Matrix_test1 Matrix_test1.cpp matrix_display.cpp pico_flash.cpp music.cpp imitation/ToneGen.cpp)
+add_executable(Matrix_test1 main.cpp matrix_display.cpp pico_flash.cpp)
 
-pico_set_program_name(Matrix_test1 "Matrix_test1")
+pico_set_program_name(Matrix_test1 "ECSE Leavers Tetris")
 pico_set_program_version(Matrix_test1 "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
