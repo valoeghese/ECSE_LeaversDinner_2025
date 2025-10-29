@@ -3,11 +3,11 @@
 #include <string.h>
 #include "matrix_display.hpp"
 #include "pindefs.hpp"
-#include "pico_flash.hpp"
 #include "clw_dbgutils.h"
 #include "pico/multicore.h"
 
-#define STR_BUFFER_LEN 128
+#include "default.hpp"
+#include "tetris.hpp"
 
 void init_gpio(void){
     gpio_init_mask(MASK_ALL_COLS|MASK_ALL_ROWS);
@@ -24,55 +24,12 @@ void init_gpio(void){
     gpio_pull_up(PB2);
 }
 
-uint counter = 0;
-uint scroll_count = 0;
-const uint8_t * current_char;
-//const char * testString = ;
-enum disp_mode{
-    USER = 0,
-    ECSE = 1,
-    EASTER = 2,
-    TETRIS
-};
+struct behaviour current_behaviour = default_behav;
 
-disp_mode display_mode = USER;
-
-
-char userStringBuffer[STR_BUFFER_LEN] = " Use PuTTY to Program (115200b)";
-char presetStringBuffer[STR_BUFFER_LEN] = " ECSE LEAVERS 2025";
-char easterEggStr[STR_BUFFER_LEN] = " COMPSYS ON TOP";
-char tempBuffer[STR_BUFFER_LEN] = {0};
-
-char * dispBuff = userStringBuffer;
-
-char * strings[] = {
-    userStringBuffer,
-    presetStringBuffer,
-    easterEggStr
-};
-uint8_t tempBufferIdx = 0;
-void scroll_screen(void){
-    if (display_mode < TETRIS) {
-        scroll_chars();
-        scroll_count++;
-        if(scroll_count==7){
-            counter = (counter+1) % strlen(strings[display_mode]);
-            const uint8_t * disp_char = char_to_matrix(strings[display_mode][counter]);
-            add_char_to_scroll(disp_char);
-            scroll_count=5-((disp_char[0]&0xE0)>>5); //3MSB of first col of char = length (0-7)
-        }
-    }
-}
-
-void screen_start(void){
-    const uint8_t * disp_char = char_to_matrix(strings[display_mode][counter]);
-    add_char_to_scroll(disp_char);
-    scroll_count=5-((disp_char[0]&0xE0)>>5); //3MSB of first col of char = length (0-7)
-}
-
+// Tick interrupt
 repeating_timer_t scroll_timer = {0};
 bool scroll_timer_cb(repeating_timer_t * timer){
-    scroll_screen();
+    current_behaviour.Tick();
     return true;
 }
 
@@ -102,21 +59,11 @@ bool Smooth(const bool raw, bool * const arr18)
 
     // probably saves a nanosecond over a loop
     if (
-        arr18[0] == notVal &&
-        arr18[1] == notVal &&
-        arr18[2] == notVal &&
-        arr18[3] == notVal &&
-        arr18[4] == notVal &&
-        arr18[5] == notVal &&
-        arr18[6] == notVal &&
-        arr18[7] == notVal &&
-        arr18[8] == notVal &&
-        arr18[9] == notVal &&
-        arr18[10] == notVal &&
-        arr18[11] == notVal &&
-        arr18[12] == notVal &&
-        arr18[13] == notVal &&
-        arr18[14] == notVal &&
+        arr18[0] == notVal && arr18[1] == notVal && arr18[2] == notVal &&
+        arr18[3] == notVal && arr18[4] == notVal && arr18[5] == notVal &&
+        arr18[6] == notVal && arr18[7] == notVal && arr18[8] == notVal &&
+        arr18[9] == notVal && arr18[10] == notVal && arr18[11] == notVal &&
+        arr18[12] == notVal && arr18[13] == notVal && arr18[14] == notVal &&
         arr18[15] == notVal
     ) {
         val = notVal;
@@ -147,13 +94,11 @@ void Poll(void) {
         // on edge, change
         if((pb1_last != pb1_val)||(pb2_last!=pb2_val)){
             if((pb1_val==0) &&(pb2_val ==0)){
-                multicore_fifo_push_blocking(EASTER);
+                multicore_fifo_push_blocking(I_PB1_PB2);
             } else if (!pb1_val) {
-                multicore_fifo_push_blocking(TETRIS);
+                multicore_fifo_push_blocking(I_PB1);
             } else if (!pb2_val) {
-                static bool toggle = 0;
-
-                multicore_fifo_push_blocking((toggle ^= 1) ? USER : ECSE);
+                multicore_fifo_push_blocking(I_PB2);
             }
         }
 
@@ -162,14 +107,17 @@ void Poll(void) {
     }
 }
 
+static char tempBuffer[128] = {0};
+static uint8_t tempBufferIdx = 0;
+
 int main()
 {
     tempBuffer[0] = ' ';
     tempBufferIdx = 1;
+
     stdio_init_all();
     init_gpio();
-    read_name_from_flash(userStringBuffer, STR_BUFFER_LEN);
-    screen_start();
+    DefaultBehaviourInit();
     printf("hello, world!");
     add_repeating_timer_ms(-100,scroll_timer_cb,0,&scroll_timer);
     multicore_launch_core1(Poll);
@@ -178,31 +126,24 @@ int main()
         uint32_t r;
         
         if (multicore_fifo_pop_timeout_us(10, &r)) {
-            display_mode = (disp_mode)r;
-
-            //3MSB of first col of char = length (0-7)
-            counter = 0;
-            if (display_mode < TETRIS) {
-                const uint8_t * disp_char = char_to_matrix(strings[display_mode][counter]);
-                add_char_to_scroll_start(disp_char);
-                add_char_to_scroll(disp_char);
-                scroll_count=5-((disp_char[0]&0xE0)>>5);
-            }
+            current_behaviour.Input( (gpio_input)r );
         }
 
-        // Clear when holding down pb
-        if(gpio_get(PB2)){
-            current_char=scroll_buff;//char_to_matrix(stringBuffer[counter]);
-        }
+        current_behaviour.PreRender();
 
-        for(int i = 0; i < 100; i++){
-            disp_char(current_char); 
+        for(int i = 0; i < 100; i++)
+        {
+            current_behaviour.DrawFrame();    
             //This is janky - ISRs were being weird so we just do 100 display cycles for every button poll
             //which means our polling rate is worst case 100us*25*100 = 250ms.
             //if ISRs still funky maybe throw this on core 1? would be cool and leave core 0 available for user code/polling.
         }
 
+        current_behaviour.PostRender();
+
+        // Debug stuff
         char inChar = getchar_timeout_us(10);
+        
         if(inChar != 0xFE){
             if(inChar != '\n'){
                 tempBuffer[tempBufferIdx] = inChar;
@@ -210,13 +151,7 @@ int main()
             }
             else{
                 tempBuffer[tempBufferIdx] = 0;
-                printf("Displaying String \"%s\"\n", tempBuffer);
-                memccpy(userStringBuffer, tempBuffer, 0, 64);
-                uint rc = write_name_to_flash(userStringBuffer);
-                if(!rc){
-                    printf("wrote string \"%s\" (%d bytes) to flash\n", userStringBuffer, strlen(userStringBuffer)+1);
-                }
-                counter = 0;
+                DefaultBehaviourDebug(tempBuffer);
                 tempBuffer[0] = ' ';
                 tempBufferIdx = 1;
             }

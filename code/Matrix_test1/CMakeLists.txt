@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Matrix_test1 main.cpp matrix_display.cpp pico_flash.cpp)
+add_executable(Matrix_test1 main.cpp matrix_display.cpp pico_flash.cpp tetris.cpp default.cpp)
 
 pico_set_program_name(Matrix_test1 "ECSE Leavers Tetris")
 pico_set_program_version(Matrix_test1 "0.1")
