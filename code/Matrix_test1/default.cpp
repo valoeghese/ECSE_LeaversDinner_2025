@@ -8,6 +8,8 @@
 #include "matrix_display.hpp"
 #include "pindefs.hpp"
 
+#include "tetris.hpp"
+
 enum disp_mode{
     USER = 0,
     ECSE = 1,
@@ -41,13 +43,16 @@ static void OnButtonPress(gpio_input in)
 {
     switch (in) {
     case I_PB1:
-        current_behaviour = default_behav; //TODO
+    // enter tetris
+        current_behaviour = tetris_behaviour;
         break;
     case I_PB2:
+    // default modes
         static bool toggle = 0;
         display_mode = (toggle ^= 1) ? USER : ECSE;
         break;
     case I_PB1_PB2:
+    // easter egg
         display_mode = EASTER;
         break;
     }
@@ -76,7 +81,7 @@ static void OnTick(void)
 
 static void OnPreRender(void)
 {
-    // Clear when holding down pb
+    // Set character to display
     if(gpio_get(PB2)){
         current_char=scroll_buff;
     }

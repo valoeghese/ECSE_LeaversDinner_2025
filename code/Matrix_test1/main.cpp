@@ -118,6 +118,7 @@ int main()
     stdio_init_all();
     init_gpio();
     DefaultBehaviourInit();
+    InitTetris();
     printf("hello, world!");
     add_repeating_timer_ms(-100,scroll_timer_cb,0,&scroll_timer);
     multicore_launch_core1(Poll);
