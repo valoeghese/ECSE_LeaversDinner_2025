@@ -6,7 +6,6 @@
 #include "pico_flash.hpp"
 #include "clw_dbgutils.h"
 #include "pico/multicore.h"
-#include "music.hpp"
 
 #define STR_BUFFER_LEN 128
 
@@ -102,7 +101,6 @@ int main()
     screen_start();
     printf("hello, world!");
     add_repeating_timer_ms(-100,scroll_timer_cb,0,&scroll_timer);
-    multicore_launch_core1(core1MusicMain);
     
     while (true) {
         static bool pb1_last = 1, pb2_last = 1;
