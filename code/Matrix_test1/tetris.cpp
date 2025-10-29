@@ -146,16 +146,70 @@ static void OnButtonPress(gpio_input in)
     }
 }
 
+static bool IsShapeColliding(void)
+{
+    for (int8_t x = 0; x < 5; x++) {
+        for (int8_t y = 0; y < 5; y++) {
+            // Check if world has tile at this position
+            if (world[x][y]) {
+                // Get position on input tile
+                // anchor is bottom right
+                int8_t input_render_x = x - input_x + 2;
+                int8_t input_render_y = y - input_y + 2;
+                
+                if (input_render_x >= 0 && input_render_y >= 0 && input_render_x < 3 && input_render_y < 3) {
+                    // Check if shape has tile at this position
+                    if (input_shape[input_render_x][input_render_y]) {
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+
+    return false;
+}
+
 static void OnTick(void)
 {
     static uint8_t prescaler = 0;
     
     if (++prescaler == 15) {
         prescaler = 0;
-        input_y++;
-        if (input_y > 5) {
-            current_behaviour = default_behav;
+
+        // Check if would fall onto solid ground
+        bool solid_ground = input_y == 4;
+        if (!solid_ground) {
+            input_y++;
+            if (IsShapeColliding()) {
+                input_y--;
+                solid_ground = true;
+            }
         }
+
+        // place block if on solid ground
+        if (solid_ground) {
+            for (int8_t x = 0; x < 3; x++) {
+                for (int8_t y = 0; y < 3; y++) {
+                    if (input_shape[x][y]) {
+                        int8_t world_x = x + (int8_t)input_x - 2;
+                        int8_t world_y = y + (int8_t)input_y - 2;
+
+                        // assume x is not outside bounds
+                        if (world_y < 0 || world_y >= 5) {
+                            // Game Over
+                            current_behaviour = default_behav;
+                            return;
+                        }
+
+                        world[world_x][world_y] = 1;
+                    }
+                }
+            }
+
+            // load new tile
+            LoadShape(xorshift64star() & 3);
+        }     
     }
 }
 
@@ -200,5 +254,8 @@ struct behaviour tetris_behaviour = {
 
 void InitTetris(void)
 {
+    // Clear world
+    memset(world, 0, 5 * 5);
+    // Load initial shape
     LoadShape(xorshift64star() & 3);
 }
