@@ -10,10 +10,12 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "music.hpp"
-#include "imitation/Timer2.h"
 #include "imitation/ToneGen.hpp"
 
 #define CyDelayUs(x) sleep_us(x)
+
+static uint32_t timer_period_ms = 100;
+static uint8_t timer_enable = 0;
 
 //clock divder compare vals forr 100khz freq counter
 uint16_t notes[13][9] = {
@@ -189,6 +191,8 @@ uint16_t compare = 0;
 uint8_t musicOn = 0;
 int8_t currentSong = -1;
 
+static int64_t nextNote(alarm_id_t id, __unused void *user_data);
+
 //                           0          1          2        3      4         5         6          7        8           9          10
 uint8_t *songList[] = {megalovania, buddyHolly, pickup, powerUp, lostLife, gameOver, marioDeath, tuning, badApple, greensleeves, rickroll};
 enum Song {
@@ -218,8 +222,11 @@ void core1MusicMain(void)
 {
     initMusic();
     playSong(SONG_GREENSLEEVES);
+    timer_enable = 1;
     while (1) {
-        tight_loop_contents();
+        //tight_loop_contents();
+        nextNote(NULL, NULL);
+        CyDelayUs(500 * timer_period_ms);
     }
 }
 
@@ -228,14 +235,14 @@ void core1MusicMain(void)
 void initMusic()
 {
     ToneGen_Init();
-    Timer_2_Init(nextNote);
+    //add_alarm_in_ms((uint32_t)timer_period_ms, nextNote, NULL, false);
     stopMusic();
 }
 
 void stopMusic()
 {
     ToneGen_Sleep();
-    Timer_2_Sleep();
+    timer_enable = 0;//Sleep
     currentSong = -1;
     musicOn = 0;
 }
@@ -260,8 +267,8 @@ int8_t playSong(int8_t songID) {
     }
     noteList = songList[songID];
     ToneGen_Enable();
-    Timer_2_Enable();
-    Timer_2_WritePeriod(DEFAULT_SPEED * 2);
+    timer_enable = 1;
+    timer_period_ms = DEFAULT_SPEED * 2;
     slideReturnSpeed = 0; // no slide
     prepareNote();CyDelayUs(600); //setup / hold period of note timer on PSOC (do we need it on Pico?)
     
@@ -289,8 +296,11 @@ static inline uint16_t lerp(uint8_t progress, uint16_t start, uint16_t end) {
     }
 }
 
-void nextNote()
-{    
+static int64_t nextNote(alarm_id_t id, __unused void *user_data)
+{
+    if (!timer_enable)
+        return timer_period_ms * (int64_t)1000;
+    
     // enter slide (setup in previous tick)
     if (noteList[noteCounter] == SLIDE && slideCounter == 0) {
         uint16_t startNote = notes[(noteList[noteCounter+1]&0x0F)][((noteList[noteCounter+1] & 0xF0)>>4)];
@@ -323,14 +333,26 @@ void nextNote()
     }
     
     compare = note/2;
-    ToneGen_WritePeriod(note);
-    ToneGen_WriteCompare(compare);
+    static uint8_t hack100 = 1; 
+    if (note == 0) {
+        //if (hack100) ToneGen_Sleep();
+        
+        ToneGen_WriteCompare(100);
+        ToneGen_WritePeriod(100);
+        hack100 = 0;
+    } else {
+        //if (!hack100) ToneGen_Enable();
+        hack100 = 1;
+        
+        ToneGen_WritePeriod(note);
+        ToneGen_WriteCompare(compare);
+    }
 
     // All period changes have to be done before the next note, it seems
     
     // return from slide
     if (slideReturnSpeed && slideCounter == SLIDE_LENGTH) {
-        Timer_2_WritePeriod(slideReturnSpeed);
+        timer_period_ms = slideReturnSpeed;
         slideReturnSpeed = 0;
     }
 
@@ -339,6 +361,8 @@ void nextNote()
     }
     
     CyDelayUs(600); //setup / hold period of note timer
+
+    return timer_period_ms * (int64_t)1000;
 }
 
 static void prepareNote(void)
@@ -347,7 +371,7 @@ static void prepareNote(void)
     // after return as speed may be the next instruction
     if (noteList[noteCounter] == SPEED) {
         uint8_t ms = noteList[noteCounter + 1];
-        Timer_2_WritePeriod((uint16_t)ms * 2);
+        timer_period_ms = ((uint16_t)ms * 2);
 
         noteCounter += 2;
     }
@@ -356,8 +380,8 @@ static void prepareNote(void)
     // so we check it last
     // annoying
     if (noteList[noteCounter] == SLIDE) {
-        slideReturnSpeed = Timer_2_ReadPeriod();
-        Timer_2_WritePeriod(slideReturnSpeed/SLIDE_LENGTH);//faster x4
+        slideReturnSpeed = (uint16_t)timer_period_ms;
+        timer_period_ms = (slideReturnSpeed/SLIDE_LENGTH);//faster x4
         slideCounter = 0;
 
         /*incrementing note counter happens next tick at the beginning, where the actual mechanics of the slide are handled*/
