@@ -15,7 +15,7 @@ An Rpi-2040 based microcontroller board with a 5x5 pixel display and two push bu
 
 Press Push Button 1 (GPIO 15) to play tetris.
 
-Blocks will fall from the sky in one of 4 shapes. You can move and rotate the block before it solifies upon touching the ground, or existing structure.
+Blocks will fall from the sky in one of 4 shapes. You can move and rotate the block before it solifies upon touching the ground, or existing structure. If a complete line is created, the line will be removed and blocks above will fall down. The game will slowly get faster as the user clears more blocks.
 
 User Inputs in *Tetris* mode:
 - Push Button 1 (GPIO 15): Rotate block anticlockwise
