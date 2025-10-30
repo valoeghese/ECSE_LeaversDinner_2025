@@ -1,7 +1,7 @@
 # ECSE Leavers Dinner
 ## Tetris Edition
 
-An Rpi-2040 based microcontroller board with a 5x5 pixel display and two push buttons was given out as an ID card for the 2025 leavers dinner for the Department of ECSE at the University of Auckland. As the code was public on GitHub, I have forked and modified it to enable playing the game 'Tetris'.
+An Rpi-2040 based microcontroller board with a 5x5 pixel display and two push buttons was given out as an ID card for the Department of ECSE at the University of Auckland's 2025 leaver's dinner. As the code was public on GitHub, I have forked and modified it to enable playing the game 'Tetris'.
 
 ## Summary of Changes
 
